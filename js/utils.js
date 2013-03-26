@@ -101,7 +101,7 @@
   var testStyle = function(style) {
 
     var elem = document.createElement('div');
-    var prefixes = ['Webkit', 'Moz', 'O', 'ms', 'Khtml'];
+    var prefixes = ['Webkit', 'Moz', 'ms', 'Khtml'];
     var bool;
     var bump = function(all, letter) {
           return letter.toUpperCase();
@@ -363,14 +363,14 @@
           this._menuCounter.textContent = currentIndex;          
         }
       }
-      this._speakerNote.innerHTML = this._slides[currentIndex - 1].getSpeakerNote();
-      if (history.pushState) {
-        if (!dontPush) {
+     /*this._speakerNote.innerHTML = this._slides[currentIndex - 1].getSpeakerNote();*/
+      //if (history.pushState) {
+       /* if (!dontPush) {
           history.pushState(this.current, 'Slide ' + this.current, '#' + this.current);
-        }
-      } else {
-        window.location.hash = this.current;
-      }
+        } */
+      //} else {
+       // window.location.hash = this.current;
+      //}
       for (var x = currentIndex; x < currentIndex + 7; x++) {
         if (this._slides[x-4]) {
           this._slides[x-4].setState(x-currentIndex);
@@ -396,13 +396,13 @@
       this._update(slideId, dontPush);
     },
 
-    showNotes: function() {
+    /*showNotes: function() {
       if (disableNotes) {
         return;
       }
-      this._speakerNote.style.display = "block";
+      /*this._speakerNote.style.display = "block";
       this._speakerNote.classList.toggle('invisible');
-    },
+    },*/
     switch3D: function() {
       toggleClass(document.body, 'three-d');
     },
@@ -440,8 +440,8 @@
         case 39:  // right arrow
         case 32:  // space
           this.next(); break;
-        case 48:  // 0
-          this.toggleHelp(); break;
+        /*case 48:  // 0
+          this.toggleHelp(); break;*/
         case 51:  // 3
           this.switch3D(); break;
         case 72:  // H
@@ -485,8 +485,8 @@
         this.showNotes(); break;
       case 'source':
         this.viewSource(); break;
-      case 'help':
-        this.toggleHelp(); break;
+      /*case 'help':
+        this.toggleHelp(); break;*/
       default:
         return;
       }
@@ -500,7 +500,7 @@
 
   // disable style theme stylesheets
   var linkEls = queryAll('link.theme');
-  var stylesheetPath = sessionStorage['theme'] || 'css/default.css';
+  var stylesheetPath = sessionStorage['theme'] || 'css/moon.css';
   linkEls.forEach(function(stylesheet) {
     stylesheet.disabled = !(stylesheet.href.indexOf(stylesheetPath) != -1);
   });
@@ -515,7 +515,7 @@
                  );
   });
 
-  query('#toc-list').innerHTML = li_array.join('');
+ /*query('#toc-list').innerHTML = li_array.join('');*/
 
   var slideshow = new SlideShow(queryAll('.slide'));
   
@@ -523,11 +523,11 @@
     query('.slides').style.display = 'block';
   }, false);
 
-  queryAll('#toc-list li a').forEach(function(el) {
+ /* queryAll('#toc-list li a').forEach(function(el) {
       el.onclick = function() { slideshow.go(el.dataset['hash']); };
-  });
+  }); */
 
   queryAll('pre').forEach(function(el) {
     addClass(el, 'prettyprint');
-  });    
+  });   
 })();

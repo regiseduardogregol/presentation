@@ -1,4 +1,4 @@
-#speaker-note {
+/*#speaker-note {
   position:absolute;
   left: 0;
   top: 80%;
@@ -13,10 +13,11 @@
   -moz-transition: top 0.5s ease-in-out;
   -o-transition: top 0.5s ease-in-out;
   transition: top 0.5s ease-in-out;
-}
-#speaker-note.invisible {
+}*/
+/*#speaker-note.invisible {
   top: 101%;
-}
+}*/
+/*
 .sidebar {
   z-index: 999;
   box-sizing: border-box;
@@ -32,10 +33,11 @@
   -moz-transition: margin 0.2s ease-in-out;
   -o-transition: margin 0.2s ease-in-out;
   transition: margin 0.2s ease-in-out;
-}
-.sidebar.invisible {
+}*/
+/*.sidebar.invisible {
   margin-left: -400px;
-}
+}*/
+
 .sidebar table {
   border-collapse: collapse;
 }

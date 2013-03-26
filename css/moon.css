@@ -4,7 +4,7 @@
  */
 
 body {
-  font: 16px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font: 16px "Trebuchet MS", "Lucida Grande", Verdana, sans-serif;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -22,9 +22,24 @@ body {
   top: 0px;
   display: block;
   overflow: hidden;
-  background: #000;
-  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(black));
-  background: -moz-linear-gradient(top, #444, black);
+
+  /*background-image: linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -o-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -moz-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -webkit-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -ms-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.31, rgb(0,99,156)),
+    color-stop(0.66, rgb(102,145,255))
+  );*/
+
+  background: #022d40;
+  /*background: -webkit-gradient(linear, left top, left bottom, from(#444), to(black));
+  background: -moz-linear-gradient(top, #444, black);*/
 }
 
 .slides {
@@ -49,7 +64,8 @@ body {
   left: 50%;
   top: 50%;
   margin-top: -350px;
-  background-color: #eee;
+  /*background-color: #eee;*/
+  background-color: #d7e6dc;
   border-radius: 10px;
   -moz-border-radius: 10px;
   opacity: 0.35;
@@ -219,13 +235,13 @@ body {
 }
 
 .slide.past {
-  visibility: visible;
+  /*visibility: visible;*/
   display: block;
   margin-left: -1400px;
 }
 
 .slide.current {
-  visibility: visible;
+  /*visibility: visible;*/
   display: block;
   margin-left: -450px;
   -webkit-transform: scale(1.0);
@@ -235,7 +251,7 @@ body {
 }
 
 .slide.future {
-  visibility: visible;
+  /*visibility: visible;*/
   display: block;
   margin-left: 500px;
 }
@@ -268,7 +284,7 @@ body.three-d div.slides {
   font-family: 'Yanone Kaffeesatz';
   font-style: normal;
   font-weight: 400;
-  src: url('/src/fonts/yanone/YanoneKaffeesatz-Regular.ttf') format('truetype');
+  src: url('../src/fonts/yanone/YanoneKaffeesatz-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Inconsolata';
@@ -293,10 +309,10 @@ body.three-d div.slides {
 
 header {
   font-family: Arial;
-  font-weight: normal;
-  letter-spacing: -.05em;
+  font-weight: bold;
+  letter-spacing: -.07em;
   color: #0054AB;
-  font-weight: normal;
+  font-weight: bold;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   position: absolute;
   left: 30px;
@@ -309,9 +325,9 @@ header {
 h1 {
   font-size: 100%;
   display: inline;
-  font-weight: normal;
+  /*font-weight: normal;*/
   padding: 0;
-  margin: 0;
+  margin-top: 300px;
 }
 
 h2 {
@@ -323,7 +339,8 @@ h2 {
 }
       
 h2:first-child {
-  margin-top: 0;
+  /*margin-top: 0;*/
+  margin-top: 150px; /*Titulo primeiro slide */
 }
 
 section, footer {
@@ -346,7 +363,8 @@ a {
   display: inline-block;
   text-decoration: none;
   line-height: 110%;
-  border-bottom: 2px solid #3f3f3f;
+  /* foi criado um índice em vez de ajuda */
+ /* border-bottom: 2px solid #3f3f3f;*/
 }
 
 .gmap a {
@@ -356,7 +374,7 @@ a {
 
 li {
   list-style: none;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 button {
@@ -394,12 +412,29 @@ section.small li {
 }
 
 section.middle {
-  line-height: 68px;
+  background: url("../img/bgSlide.png");
+  border-radius: 10px;
+  /*line-height: 68px;*/
   text-align: center;
   display: table-cell;
   vertical-align: middle;
   height: 700px;
   width: 900px;
+
+  /*background-image: linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -o-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -moz-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -webkit-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+  background-image: -ms-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.31, rgb(0,99,156)),
+    color-stop(0.66, rgb(102,145,255))
+  );  */
+
 }
 
 pre {

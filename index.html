@@ -35,26 +35,34 @@
     
     <link href="css/moon.css" class="theme" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" media="screen" />
-    <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="css/print2.css" rel="stylesheet" type="text/css" media="print" />
 
+    <script type="text/javascript">
+        function zoomMais(){
+          var zoom = document.getElementsByTagName("body")[0]
+          if(document.getElementsByTagName("body")[0].className == 'three-d')
+            document.getElementsByTagName("body")[0].className = ''
+        }
+        function zoomMenos(){
+          if(document.getElementsByTagName("body")[0].className == '')
+            document.getElementsByTagName("body")[0].className = 'three-d'
+        }
+
+        function imprimir(){
+          document.getElementById('layout_impressao').contentWindow.print();
+        }
+    </script>
   </head>
   <body class="three-d">
-    <!--<nav id="helpers">
+    <nav id="helpers">
       <button title="Voltar Slide" id="nav-prev" class="nav-prev">⇽</button> 
       <button title="" id="slide-no">5</button> 
       <button title="Próximo Slide" id="nav-next" class="nav-next">⇾</button>
-      
-      <menu>
-        
-        <button type="checkbox" data-command="toc" title="Refresh na páina" class="toc">R</button>
-        <button type="checkbox" data-command="resources" title="View Related Resources">☆</button> 
-        <button type="checkbox" data-command="notes" title="Veja notas do Slide">✏</button>
-        <button type="checkbox" data-command="help" title="Veja o Índice">?</button>
-       
-      </menu>
-      
-    </nav> -->
-     <div id="imprime" >
+      <button title="Zoom +" id="zoom" onclick="zoomMais();">+</button>
+      <button title="Zoom -" id="zoom" onclick="zoomMenos();">-</button>
+      <button title="Imprimir" id="print" class="icon-print" onclick="imprimir();">&#xe000;</button>
+    </nav>
+    <div id="imprime" >
     <div class="presentation">
       <div id="presentation-counter">Carregando...</div>
       <div id="slides" class="slides">
@@ -76,106 +84,76 @@
                   2012
               </h3>
             <hgroup>
-            
-            <!--
-            <p><img src="img/logo.png" alt="logo itai" title="Logo ITAI"/></p>
-            -->
-
             <p>Pressione a tecla <span id="left-init-key" class="key">&rarr;</span> para avançar</p>
           </section>
-          <!--
-          <aside class="note">
-            <section>
-              Bem vindo.
-            </section>
-          </aside> 
-        -->
         </div>
 
-        <!--
-        <div class="slide" id="controls-slide">
-          <header>Controle dos Slides</header>
-          <style>
-            #controls-slide li, #controls-slide p {
-              font-size: 32px;
-            }
-            #controls-slide .key {
-              bottom: 2px;
-            }
-          </style>
+        <div class="slide" id="timeline-slide">
+          <header>Instituto de Tecnologia Aplicada e Inovação - ITAI</header>
           <section>
+            <style>
+              #timeline-slide header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide p{font-size: 18px; margin-top: 1px;text-align: justify;}
+              #timeline-slide li{padding: 2px;}
+            </style>
+            <p>
+              O ITAI - Instituto de Tecnologia Aplicada e Inovação é uma associação civil, sem fins econômicos, criado em 12 de outubro de 1996, por entidades de iniciativa privada, setor público, universidades e centros tecnológicos.
+            </p>
+            <p>
+              O ITAI está qualificado como OSCIP – Organização da Sociedade Civil de Interesse Público, nos termos da Lei no 9.790, de 23 de março de 1999, e que consta do Processo MJ no 08001.003813/2005-76, conforme despacho do Secretário Nacional de Justiça, de 22 de julho de 2005, publicado no Diário Oficial de 28 de julho de 2005.
+            </p>
+            <p>
+              O ITAI está credenciado, pelo Ministério de Ciência e Tecnologia na Lei de Informática no 8.248, 23 de outubro de 1991, conforme Resolução CATI no 55 de 23 de novembro de 2007.
+            </p>
+            <p>
+              O objetivo estatutário do ITAI é a integração dos principais agentes do desenvolvimento – setor público, comunidade empresarial e instituições de ensino e pesquisa, visando a evolução tecnológica através de ações voltadas à educação, à cultura e ao desenvolvimento sócio-econômico, que buscam:
+            </p>
             <ul>
-              <li><span class="key">&larr;</span> e <span class="key">&rarr;</span> move para os lados.</li>
-              <li><span class="key">Ctrl/Comando</span> <span class="key">+</span> ou <span class="key">-</span> define o zoom da página.</li>
-              <li><span class="key">Ctrl/Comando</span> <span class="key">0</span> retorna ao normal.</li>
-              <li><span class="key">T</span> muda o tema da apresentação.</li>
-              <li><span class="key">N</span> mostra algumas notas</li>
-              <li><span class="key">3</span> efeito 3D.</li>
-              <li><span class="key">0</span> ajuda.</li>
+              <li>* Formação de recursos humanos especializados;</li>
+              <li>* Integração das entidades de ensino e pesquisa;</li>
+              <li>* Desenvolvimento de produtos inovadores com padrões de qualidade internacional;</li>
+              <li>* Melhorar a qualidade, a produtividade e a competitividade de sistemas;</li>
+              <li>* Promover o uso de tecnologias atualizadas;</li>
+              <li>* Fomentar o desenvolvimento de projetos cooperativos;</li>
+              <li>* Constituir um polo especializado de serviços;</li>
+              <li>* Formar massa crítica altamente especializada;</li>
+              <li>* Promover e incentivar a criação de novas empresas;</li>
+              <li>* Integrar a empresa e a escola.</li>
             </ul>
           </section>
         </div>
-        -->
 
-        <!--
-        <div class="slide" id="title-slide">
-          <style>
-            #title-slide h1, #title-slide h2 {
-              color: #0054AB;
-            }
-            #title-slide h1 {
-              letter-spacing: -2px;
-              font-size: 96px;
-            }
-            #title-slide h2 {
-              margin-top: -5px;
-              font-size: 40px;
-              letter-spacing: -1px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h1>
-                Relatório de Atividades
-              </h1>
-              <h2>
-                ITAI 2012
-              </h2>
-            </hgroup>
+        <div class="slide" id="timeline-slide-1">
+          <header>Instituto de Tecnologia Aplicada e Inovação - ITAI</header>
+          <section>
+            <style>
+               #timeline-slide-1 header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-1 p{font-size: 18px; margin-top: 1px;text-align: justify;}
+              #timeline-slide-1 li{padding: 3px;}
+            </style>
+            <h3>MISSÃO</h3>
+            <p>
+              Contribuir para o desenvolvimento sustentável da região trinacional, mediante o fomento à ciência, tecnologia, inovação e formação de recursos humanos, com qualidade e responsabilidade socioambiental.
+            </p>
+            <h3>VISÃO</h3>
+            <p>
+              Ser reconhecido como entidade de referência na região trinacional para o desenvolvimento científico, tecnológico e inovação.
+            </p>
+            <h3>POLÍTICA DA QUALIDADE</h3>
+            <p>
+              Prover soluções inovadores, eficientes e eficazes, promovendo a melhoria contínua e a responsabilidade socioambiental.
+            </p>
           </section>
         </div>
-        -->
-        <!--
-        <div class="slide" id="title-slide-2">
-          <style>
-            #title-slide-2 h2 {
-              color: #0054AB;
-              /*background-color: #efc500;*/
-            } 
-            #title-slide-2 h2.title {
-              margin-top: 20px;
-              font-size: 40px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2 class="title">
-                NÚCLEO SIMULAÇÃO DE SISTEMAS ELÉTRICOS DE POTÊNCIA
-              </h2>
-              <h3>
-                Laboratório de Automação e Simulação de Sistemas Elétricos (LASSE)
-              </h3>
-            </hgroup>
-          </section>
-        </div>
-        -->
 
-        <div class="slide" id="timeline-slide">
+        <div class="slide" id="timeline-slide-2">
           <header>NÚCLEO SIMULAÇÃO DE SISTEMAS ELÉTRICOS DE POTÊNCIA</header>
           <section>
             <style>
-              #timeline-slide h3 {margin-top: 1px;}
-              p,li {text-align: justify;}
+              #timeline-slide-2 header{background-color: #f3b825 !important; font-size: 25px !important; letter-spacing: 1px !important;box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-2 h3 {margin-top: 1px;}
+              #timeline-slide-2 p {font-size: 18px; margin-top: 1px;text-align: justify;}
+              #timeline-slide-2 li{padding: 3px;}
             </style>
             <h3>
               Laboratório de Automação e Simulação de Sistemas Elétricos (LASSE)
@@ -198,8 +176,12 @@
           </section>
         </div>
 
-        <div class="slide" id="timeline-slide-2">
+        <div class="slide" id="timeline-slide-3">
          <header>NÚCLEO SIMULAÇÃO DE SISTEMAS ELÉTRICOS DE POTÊNCIA</header>
+          <style>
+              #timeline-slide-3 header{background-color: #f3b825 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-3 li{font-size: 18px !important;}
+          </style>
           <section>
             <p>
               O contrato mantém as condições de utilização do LASSE em 60% do tempo reservado para a Itaipu Binacional e Fundação PTI e 40% do tempo para clientes de mercado externo. Até dezembro/2012 foram demandados 06 novos STTs, sendo 03 demandas da Itaipu Binacional e Fundação PTI e outros 03 de mercado externo, tendo clientes como Alston, ABB e Ecil.
@@ -224,48 +206,53 @@
           </section>
         </div>
 
-        <div class="slide" id="timeline-slide-3">
+        <div class="slide" id="timeline-slide-4">
           <header>NÚCLEO SIMULAÇÃO DE SISTEMAS ELÉTRICOS DE POTÊNCIA</header>
           <section>
             <style>
-              #timeline-slide-3 h3{margin-top: 1px !important;}
+              #timeline-slide-4 header{background-color: #f3b825 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-4 li{padding: 4px; font-size: 17px !important;}
             </style>
             <h3>Publicação de Artigos e Participação de Eventos:</h3>
             <ul>
               <li>
                 * Ensaio de Modelo Utilizando Simulador RTDS para Validação dos Ajustes das Proteções das LIs 500Kv Entre a Usina Hidrelétrica de Itaipu e a Subestação Foz do Iguaçu Devido a Alteração de Configuração na Subestação de Foz do Iguaçu:
                   <ul>
-                    <li>– XII SEPOPE – Simpósio de Especialistas em Planejamento da Operação e Expansão Elétrica, realizado no Rio De Janeiro – RJ (maio/12), apresentação de artigo;</li>
-                    <li>– IV SBSE – Simpósio Brasileiro de Sistemas Elétricos, realizado Em Goiânia – GO (maio/12), apresentação de pôster.</li>
+                      <li>– XII SEPOPE – Simpósio de Especialistas em Planejamento da Operação e Expansão Elétrica, realizado no Rio De Janeiro – RJ (maio/12), apresentação de artigo;</li>
+                      <li>– IV SBSE – Simpósio Brasileiro de Sistemas Elétricos, realizado Em Goiânia – GO (maio/12), apresentação de pôster.</li>
                   </ul>
               </li>
               <li>
                 * Desenvolvimento de uma Metodologia Para Execução de Ensaios de Modelos Computacionais de Sistemas de Controle e Proteção Associados a Sistemas Elétricos de Potência a Partir de uma Plataforma de Simulação em Tempo Real – RTDS:
                 <ul>
-                  <li>– 2º SEMAI – Seminário de Inovação de Itaipu, realizado em Foz do Iguaçu (outubro/12), exposição de pôster.</li>
+                    <li>– 2º SEMAI – Seminário de Inovação de Itaipu, realizado em Foz do Iguaçu (outubro/12), exposição de pôster.</li>
                 </ul>
               </li>
               <li>
                * Experiência Obtida Durante a Validação do Sistema de Proteção do Autotransformador e Transformador Regulador T5/R5 do Sistema de Energia Itaipu 50Hz por meio da Utilização de uma Ferramenta de Simulação Digital em Tempo Real:
                   <ul>
-                    <li>– XIII Conferência Doble no Brasil, realizada em Foz do Iguaçu (novembro/2012), apresentação de artigo.</li>
+                      <li>– XIII Conferência Doble no Brasil, realizada em Foz do Iguaçu (novembro/2012), apresentação de artigo.</li>
                   </ul>
               </li>
               <li>
                 * Definição e Validação dos Ajustes das Proteções das Linhas LI IPU 60Hz FI Considerando o Barramento de 500Kv na SE Foz do Iguaçu:
                 <ul>
-                  <li>– SNPTEE 2013 – Seminário Nacional de Produção e Transmissão de Energia Elétrica, submissão de Artigo em parceria com a Itaipu.</li>
+                    <li>
+                      – SNPTEE 2013 – Seminário Nacional de Produção e Transmissão de Energia Elétrica, submissão de Artigo em parceria com a Itaipu.
+                    </li>
                 </ul>
               </li>
             </ul>
           </section>
         </div>
 
-        <div class="slide" id="timeline-slide-4">
+        <div class="slide" id="timeline-slide-5">
           <header>NÚCLEO SIMULAÇÃO DE SISTEMAS ELÉTRICOS DE POTÊNCIA</header>
           <section>
             <style>
-              #timeline-slide-4 h3 {margin-top: 1px;}
+              #timeline-slide-5 header{background-color: #f3b825 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-5 li{font-size: 18px !important;}
+              #timeline-slide-5 h3 {margin-top: 1px;}
             </style>
             <h3>
               Projetos Desenvolvidos Pelos Bolsistas e Voluntários
@@ -283,37 +270,14 @@
             </ul>
           </section>
         </div>
-<!--
-        <div class="slide" id="title-slide-3">
-          <style>
-            #title-slide-3 h1, #title-slide-3 h2 {
-              color: #0054AB;
-            }
-            #title-slide-3 h2 {
-              margin-top: -5px;
-              font-size: 40px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                NÚCLEO AUTOMAÇÃO INDUSTRIAL
-              </h2>
-              <h3>
-                METODOLOGIA GD
-              </h3>
-            </hgroup>
-          </section>
-        </div>
--->
 
-        <div class="slide" id="timeline-slide-5">
+        <div class="slide" id="timeline-slide-6">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
           <section>
             <style>
-              header{font-size: 30px !important; left: 25px !important;}
-              #timeline-slide-5 h3 {margin-top: 1px;}
-              p,li {text-align: justify;}
+              #timeline-slide-6 header{background-color: #137c44 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-6 li{font-size: 18px !important;}
+              #timeline-slide-6 h3 {margin-top: 1px;}
             </style>
             <h3>
               Metodologia GD
@@ -329,14 +293,19 @@
           </section>
         </div>
 
-        <div class="slide" id="timeline-slide-6">
+        <div class="slide" id="timeline-slide-7">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
           <section>
             <style>
-              header{font-size: 30px !important; left: 25px !important;}
-              #timeline-slide-6 h3 {margin-top: 1px;}
-              #timeline-slide-6 p {font-size: 18px !important;}
-              #timeline-slide-6 li {text-align: justify;font-size: 14px !important;}
+              #timeline-slide-7 header{background-color: #137c44 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-7 h3 {margin-top: 1px;}
+              #timeline-slide-7 p {font-size: 16px !important;}
+              #timeline-slide-7 li {text-align: justify;font-size: 16px !important; padding: 4px !important;}
+              @-moz-document url-prefix(){
+                            #timeline-slide-7 ul li {
+                                  padding: 1px !important;
+                            }
+              }
             </style>
             <h3>Resultados obtidos em 2012:</h3>
             <ul>
@@ -365,41 +334,23 @@
                 * Prospecção de projetos de Pesquisa & Desenvolvimento relacionados ao tema GD e biogás por meio da Chamada nº 14 da Aneel junto às concessionárias de energia (atualmente em fase de análise pela Aneel e concessionárias), que ampliará a abordagem do tema no ITAI e também nas localidades onde os projetos serão implantados.
               </li>
               <li>
-                PAINELLLLL GD???! NÃO LEMBRO O NOME.
+                * Desenvolvimento de um Infográfico com dados da Granja Colombari.
               </li>
             </ul>
             <h3>Participação em Eventos:</h3>
             <p>
               Rio+20 – Expo Brasil Sustentável, participação em stand, realizado em maio/2012 no Rio de Janeiro.
-              Semana Nacional de Ciência e Tecnologia, participação em stand, realizado em outubro/12 em Brasília.
             </p>
+            <p>Semana Nacional de Ciência e Tecnologia, participação em stand, realizado em outubro/12 em Brasília.</p>
           </section>
         </div>
-<!--
-        <div class="slide" id="title-slide-4">
-          <style>
-            #title-slide-4 h2 {
-              margin-top: 20px;
-              color: #0054AB;
-              font-size: 60px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                PROJETO BATERIAS
-              </h2>
-            </hgroup>
-          </section>
-        </div>
--->
 
-        <div class="slide" id="timeline-slide-7">
+        <div class="slide" id="timeline-slide-8">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
           <style>
-              header{font-size: 30px !important; left: 25px !important;}
-              #timeline-slide-7 h3 {margin-top: 1px;}
-              p,li {text-align: justify;}
+              #timeline-slide-8 header{background-color: #137c44 !important; font-size: 25px !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-8 h3 {margin-top: 1px;}
+              #timeline-slide-8 li{font-size: 18px !important;}
           </style>
           <section>
             <h3>Baterias</h3>
@@ -417,30 +368,13 @@
             </p>
           </section>
         </div>
-<!--
-        <div class="slide" id="title-slide-5">
-          <style>
-            #title-slide-5 h2 {
-              margin-top: 20px;
-              color: #0054AB;
-              font-size: 80px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                MFS - TR
-              </h2>
-              <h3>
-                Medição Fasorial Sincronizada em Tempo Real
-              </h3>
-            </hgroup>
-          </section>
-        </div>
--->
-        <div class="slide" id="timeline-slide-8">
+
+        <div class="slide" id="timeline-slide-9">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
-          <style type="text/css">#timeline-slide-8 h3 {margin-top: 1px;}</style>
+          <style type="text/css">
+            #timeline-slide-9 header{background-color: #137c44 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+            #timeline-slide-9 h3 {margin-top: 1px;}
+          </style>
           <section>
           <h3>MFS - TR</h3>
             <p>
@@ -470,32 +404,17 @@
           </section>
         </div>
 
-<!--
-        <div class="slide" id="title-slide-6">
-          <style>
-            #title-slide-6 h2 {
-              margin-top: 20px;
-              color: #0054AB;
-              font-size: 100px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                SRM
-              </h2>
-              <h3>Sistema de Relatórios da Manutenção</h3>
-            </hgroup>
-          </section>
-        </div>
--->
-
-        <div class="slide" id="timeline-slide-9">          
+        <div class="slide" id="timeline-slide-10">          
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
           <style type="text/css">
-            #timeline-slide-9 header{font-size: 30px !important; left: 25px !important;}
-              #timeline-slide-9 h3 {margin-top: 1px;}
-              #timeline-slide-9 li {padding: 5px;}
+            #timeline-slide-10 header{background-color: #137c44 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-10 h3 {margin-top: 1px;}
+              #timeline-slide-10 li {padding: 5px;}
+              @-moz-document url-prefix(){
+                            #timeline-slide-10 li {
+                                  padding: 4px;
+                            }
+              }
           </style>
           <section>
             <h3>SRM</h3>
@@ -531,35 +450,20 @@
                 * Capacitação dos funcionários da Itaipu Binacional nos sistemas desenvolvidos no projeto.
               </li>
             </ul>
-
           </section>
         </div>
-<!--
-        <div class="slide" id="title-slide-7">
-          <style>
-           #title-slide-7 h2 {
-              margin-top: 20px;
-              color: #0054AB;
-              font-size: 100px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                RPMF
-              </h2>
-              <h3>Registrador de Perturbações e Medição Fasorial</h3>
-            </hgroup>
-          </section>
-        </div>
--->
 
-        <div class="slide" id="timeline-slide-10">
+        <div class="slide" id="timeline-slide-11">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
             <style type="text/css">
-              #timeline-slide-10 header{font-size: 30px !important; left: 25px !important;}
-              #timeline-slide-10 h3 {margin-top: 1px;}
-              #timeline-slide-10 p {font-size: 17px;}
+              #timeline-slide-11 header{background-color: #137c44 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-11 h3 {margin-top: 1px;}
+              #timeline-slide-11 p {font-size: 17px;}
+              @-moz-document url-prefix(){
+                            #timeline-slide-11 p {
+                                  font-size: 16px !important;
+                            }
+              }
             </style>
           <section>
             <h3>RPMF</h3>
@@ -583,11 +487,12 @@
         </div>
 
 
-        <div class="slide" id="timeline-slide-11">
+        <div class="slide" id="timeline-slide-12">
           <header>NÚCLEO AUTOMAÇÃO INDUSTRIAL</header>
             <style type="text/css">
-              #timeline-slide-11 h3{margin-top: 1px;}
-              #timeline-slide-11 li{font-size: 17px;}
+              #timeline-slide-12 header{background-color: #137c44 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-12 h3{margin-top: 1px;}
+              #timeline-slide-12 li{font-size: 17px;}
             </style>
           <section>
             <h3>Projetos Desenvolvidos pelos Bolsitas e Voluntários</h3>
@@ -625,30 +530,11 @@
             </ul>
           </section>
         </div>
-<!--
-        <div class="slide" id="title-slide-8">
-          <style>
-            #title-slide-8 h2 {
-              margin-top: 20px;
-              color: #0054AB;
-              font-size: 60px;
-            }
-          </style>
-          <section class="middle">
-            <hgroup>
-              <h2>
-                PORTAL DE ESTÁGIOS
-              </h2>
-            </hgroup>
-          </section>
-        </div>
--->
 
-        <div class="slide" id="timeline-slide-12">
+        <div class="slide" id="timeline-slide-13">
           <header>NÚCLEO DE EDUCAÇÃO CONTINUADA</header>
             <style type="text/css">
-              #timeline-slide-12 p{margin-top: 1px; font-size: 16px;}
-              #timeline-slide-12 li{font-size: 14px; }
+              #timeline-slide-13 header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
             </style>
           <section>
             <p>
@@ -662,26 +548,18 @@
               <li>
                 * Curso de Reciclagem e para Formação de Auditores Internos ISO 9001:2008, realizado no mês de agosto – foram certificados seis colaboradores;
               </li>
-              <figure>
-                <img src="img/treinamentoiso.png" width="85%" alt="Treinamento ISO" />
-              </figure>
               <li>
                 * NR 10 Curso de  Segurança em Instalações e Serviços em Eletricidade, realizado entre os meses de agosto e setembro – foram certificados cinco colaboradores.
               </li>
-            </ul>
-            
+            </ul>            
           </section>
         </div>
 
-
-        <div class="slide" id="timeline-slide-13">
+        <div class="slide" id="timeline-slide-14">
           <header>NÚCLEO DE EDUCAÇÃO CONTINUADA</header>
             <style type="text/css">
-              #timeline-slide-13 h3{margin-top: 1px;}
-              #timeline-slide-13 li{padding: 5px;}
-              #timeline-slide-13 p{font-size: 16px;}
-              #timeline-slide-13 figure{text-align:center;}
-              #timeline-slide-13 p.mini{text-align: center;font-size: 10px;margin-top: 1px;}
+              #timeline-slide-14 header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-14 li{font-size: 18px;}
             </style>
           <section>
             <h3>Curso Pré-Vestibular Unioeste</h3>
@@ -695,21 +573,16 @@
               <li>* Monitores Voluntários: 20;</li>
               <li>* Equipe gestora do projeto: 3 (Auxiliar Administrativa, Auxiliar Pedagógica e Gerente Administrativa Financeiro);</li>
               <li>* Aprovados no Vestibular Unioeste: 22 alunos.</li>
-              <figure>
-                <img src="img/aula.png" width="42%" alt="Aula Inaugural" />
-                <figcaption>
-                  <p class="mini">Aula Inaugural 30 de junho de 2012.</p>
-                </figcaption>
-              </figure>
             </ul>
           </section>
         </div>
         
-         <div class="slide" id="timeline-slide-14">
+         <div class="slide" id="timeline-slide-15">
           <header>PORTAL DE ESTÁGIOS</header>
             <style>
-              #timeline-slide-14 p{font-size: 18px;margin-top: 1px;}
-              #timeline-slide-1 li{font-size: 14px; }
+              #timeline-slide-15 header{background-color: #dbad29 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-15 p{margin-top: 1px;}
+              #timeline-slide-15 li{padding: 4px;}
             </style>
           <section>
             <p>
@@ -738,16 +611,19 @@
           </section>
         </div>
 
-        <div class="slide" id="timeline-slide-15">
+        <div class="slide" id="timeline-slide-16">
           <header>PORTAL DE ESTÁGIOS</header>
-          <style type="text/css">#timeline-slide-15 h3{margin-top: 1px;}</style>
+            <style type="text/css">
+              #timeline-slide-16 header{background-color: #dbad29 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-16 h3{margin-top: 1px;}
+            </style>
           <section>
             <h3>Principais atividades gestão de bolsas:</h3>
             <ul>
               <li>Receber documentos e formulários para confecção do Termo de Concessão de Bolsa - TCB;</li>
               <li>Conferir o preenchimento dos formulários mediante check list; </li>
               <li>Averiguar as informações do TCB;</li>
-              <li>Comunicar aos bolsistas que o termo deve ser assinado e nas modalidades de IC, ITI e ITE colher a assinatura do orientador;</li>
+              <li>Entregar o Termo de Bolsa para ser assinado pelo Bolsista e Orientador;</li>
               <li>Encaminhar para assinatura dos diretores da FPTI;</li>
               <li>Arquivar as vias de TCB.</li>
             </ul>
@@ -763,28 +639,75 @@
           </section>
         </div>
 
-        
- 
-<!--
-        <div class="slide" id="formula-outro-slide">
-          <style>
-            #formula-outro-slide h1{
-             margin-top: 20px;
-              color: #0054AB;
-              font-size: 60px;
-            }
+        <div class="slide" id="timeline-slide-17">
+          <header>AÇÕES INSTITUCIONAIS</header>
+          <style type="text/css">
+            #timeline-slide-17 header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+            #timeline-slide-17 h3{margin-top: 1px;}
           </style>
-          <section class="middle formula">
-            <h1>FIM.</h1>
+          <section>
+            <h3>Programa 5S</h3>
+            <p>
+              O programa implantado em 2007 no ITAI tem como objetivo promover uma melhora no ambiente de trabalho; prevenir acidentes; reduzir custos; eliminar desperdícios; desenvolver trabalho em equipe; melhorar as relações humanas; e melhorar a qualidade dos serviços oferecidos pelo instituto.
+            </p>
+            <h3>Apoio a Campanha da Gelatina promovida pelo Grupo Força Voluntária da IB</h3>
+            <p>
+              Dia 08 de Abril é o dia Mundial de combate ao Câncer,  o Grupo Solidário do Programa Reviver da Itaipu Binacional promove a Campanha da Gelatina para alimentação de pessoas que realizam tratamento contra o câncer e muitas vezes, sofrem dores na mucosa oral e digestiva ao ingerir alimentos sólidos.
+            </p>
+            <p>
+              No ano de 2012 os colaboradores do ITAI arrecadam dentro do PTI 120kg de gelatinas, que foram distribuídas pelo Grupo a cinco instituições que apoiam o tratamento das pessoas portadoras de câncer.
+            </p>
+            <h3>Workshop ITAI</h3>
+            <p>
+              Para comemorar os 16 anos de ITAI, foi realizado o Workshop de integração para apresentar os principais projetos desenvolvidos, resultados e perspectivas para os colaboradores, bolsistas e estagiários que através de apresentações demonstraram um pouco dos trabalhos aos quais estão envolvidos, possibilitando que todos conheçam de forma geral o que está sendo desenvolvido.
+            </p>
           </section>
         </div>
--->
+
+        <div class="slide" id="timeline-slide-18">
+          <header>AÇÕES INSTITUCIONAIS</header>
+            <style type="text/css">
+              #timeline-slide-18 header{letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
+              #timeline-slide-18 h3{margin-top: 1px;}
+            </style>
+          <section>
+            <h3>Campanha Natal das Cataratas</h3>
+            <p>
+              Pelo 3° ano o ITAI através da parceria com Itaipu Binacional, Parque Tecnológico Itaipu, Exército Brasileiro e demais entidade da campanha, realizaram uma ação solidária integrada a Campanha Natal das Cataratas nos bairros carentes de Foz do Iguaçu, através da distribuição de brinquedos a mais de 40 mil crianças foram contempladas com brinquedos doados pela Receita Federal.
+            </p>
+            <h3>Ação Social 2012 - Lar dos Velhinhos</h3>
+            <p>
+              No mês de dezembro os colaboradores do ITAI promoveram uma ação social na Entidade Lar dos Velhinhos que atende a 60 idosos, uma tarde especial, com lanche, moda de viola, dança e doação de produtos de higiene arrecadados pelos colaboradores.
+            </p>
+            <h3>Descarte Consciente</h3>
+            <p>
+              Em julho de 2012 foram doados equipamentos e componentes de informática que não tinham mais utilidade para o Instituto, entre os beneficiados estão: Unioeste Foz, UTFPR Medianeira, Colégio Estadual Ulisses Guimarães e o Instituto Katana.
+            </p>
+          </section>
+        </div>
+
+
+        <div class="slide" id="timeline-slide-end">
+          <section class="end">
+            <style type="text/css">
+              #timeline-slide-end p{color: #fff;text-align: center;padding: 1px;font-size: 18px !important;}
+              #timeline-slide-end .first{margin-top: 20%;}
+            </style>
+              <p class="first">(45) 3576-7113</p>
+              <p>
+                <a href="http://itai.org.br/" title="Endereço Eletrônico do ITAI" target="_blank">www.itai.org.br</a> 
+                | <a href="mailto:itai@itai.org.br" title="Clique para enviar um e-mail ao ITAI">itai@itai.org.br</a>
+              </p>
+              <p>Av. Tancredo Neves, 6.731 - PTI - Parque Tecnológico Itaipu</p>
+              <p>Caixa Postal: 2012 - CEP: 85867-970 - Foz do Iguaçu - Paraná</p>
+          </section>
+        </div>
+
       </div> 
     </div>
-   
-       
-    </div>
+  </div>
 
+  <iframe src="imprime.html" id="layout_impressao"></iframe>
     <!--[if lt IE 9]>
     <script 
       src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
@@ -792,9 +715,6 @@
     <script>CFInstall.check({ mode: "overlay" });</script>
     <![endif]-->
 
-    <!--
-    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>
-    -->
     <script src="js/utils.js"></script> 
   </body>
 </html>

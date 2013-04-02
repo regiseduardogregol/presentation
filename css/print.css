@@ -1,10 +1,6 @@
-@media print{
-   #imprime }
-
-
-
-/**
-nav{display: none;}
- * HTML5 Slide Deck Theme - Moon
- * Author: Eric Bidelman <ericbidelman@html5rocks.com>
- */
+/* 
+*{margin: 0;padding: 0;}
+#presentation-counter {display: none;}
+.middle p{display: none;}
+.slides {display: none;}
+.slide,.current{display: block;}*/

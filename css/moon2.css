@@ -3,97 +3,22 @@
  * Author: Eric Bidelman <ericbidelman@html5rocks.com>
  */
 
- /********** FONTS ************/
-
- @font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot');
-  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.woff') format('woff'),
-    url('../fonts/icomoon.ttf') format('truetype'),
-    url('../fonts/icomoon.svg#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.icon-print {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
 body {
   font: 16px "Trebuchet MS", "Lucida Grande", Verdana, sans-serif;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0px; top: 0px;
+  background: #022d40;
   /*-webkit-font-smoothing: antialiased;*/
 }
-
-.presentation {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  display: block;
-  overflow: hidden;
-
-  /*background-image: linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
-  background-image: -o-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
-  background-image: -moz-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
-  background-image: -webkit-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
-  background-image: -ms-linear-gradient(bottom, rgb(0,99,156) 31%, rgb(102,145,255) 66%);
-
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.31, rgb(0,99,156)),
-    color-stop(0.66, rgb(102,145,255))
-  );*/
-
-  background: #022d40;
-  /*background: -webkit-gradient(linear, left top, left bottom, from(#444), to(black));
-  background: -moz-linear-gradient(top, #444, black);*/
-}
-
-.slides {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  /*display: none;*/
-  -webkit-transition: -webkit-transform 1.5s ease-in-out;
-  -moz-transition: -moz-transform 1.5s ease-in-out;
-  -o-transition: -o-transform 1.5s ease-in-out;
-  transition: transform 1.5s ease-in-out;
-}
+#imprime{padding-left: 500px;float: center;}
 
 .slide {
-  display: none;
-  position: absolute;
   overflow: hidden;
   width: 900px;
   height: 700px;
-  left: 50%;
-  top: 50%;
-  margin-top: -350px;
-  /*background-color: #eee;
-  background-color: #d7e6dc;*/
-  background-color: #E1E7F4;
+  
+  /*background-color: #eee;*/
+  background-color: #d7e6dc;
   border-radius: 10px;
   -moz-border-radius: 10px;
-  opacity: 0.35;
 
   -webkit-transform: scale(0.8) translateZ(0);
   -moz-transform: scale(0.8);
@@ -131,11 +56,6 @@ body {
 
 .slide p, .slide textarea {
   font-size: 20px;
-  text-align: justify;
-}
-
-.slide li, .slide textarea {
-  text-align: justify;
 }
 
 .slide .counter {
@@ -235,21 +155,11 @@ body {
   margin-left: 500px;
 }
 
-.slide.far-future {
-  display: block;
-  margin-left: 1500px;
-}
 
 /*body.three-d div.presentation {
   background: -webkit-gradient(radial, 50% 50%, 10, 50% 50%, 1000, from(#333), to(#000));        
 }*/
 
-body.three-d div.slides {
-  -webkit-transform: translateX(50px) scale(0.8) rotateY(10deg);
-  -moz-transform: translateX(50px) scale(0.8) rotateY(10deg);
-  -o-transform: translateX(50px) scale(0.8) rotateY(10deg);
-  transform: translateX(50px) scale(0.8) rotateY(10deg);
-}
 
 /* Content */
 /*
@@ -290,17 +200,15 @@ header {
   font-family: Arial;
   font-weight: bold;
   letter-spacing: -.07em;
-  color: #fff;
+  color: #0054AB;
   font-weight: bold;
-  background-color: #0054AB;
-  
-  /*text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;*/
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   position: absolute;
   left: 30px;
   top: 25px;
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 50px;
 }
 
 h1 {
@@ -308,7 +216,6 @@ h1 {
   display: inline;
   /*font-weight: normal;*/
   padding: 0;
-  margin-top: 300px;
 }
 
 h2 {
@@ -318,22 +225,15 @@ h2 {
   padding: 0;
   margin: 15px 0 5px 0;
 }
-      
-h2:first-child {
-  /*margin-top: 0;*/
-  margin-top: 150px; /*Titulo primeiro slide */
-}
 
 section, footer {
   font: Arial;
   font-weight: normal;
   color: #3f3f3f;
-  /* TEXT SHADOW não */
-  /*text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;*/
+  text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;
   margin: 100px 30px 0;
   display: block;
-  /* Problems com firefox */
-  /*overflow: hidden; */
+  overflow: hidden;
 }
 
 footer {
@@ -390,15 +290,6 @@ section.small li {
   padding-bottom: 0;
 }
 
-section.end {
-  background: url("../img/slidefinal.png");
-  border-radius: 10px; 
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  height: 700px;
-  width: 900px;
-}
 section.middle {
   background: url("../img/bgSlide.png");
   border-radius: 10px;
@@ -551,6 +442,7 @@ pre input[type="range"] {
   font-size: 50px;
 }
 
+/*
 #presentation-counter {
   color: #fff;
   font: 100px 'Yanone Kaffeesatz';
@@ -560,6 +452,7 @@ pre input[type="range"] {
   width: 100%;
   text-align: center;
 }
+*/
 
 .hsl-value {
   display: inline-block;

@@ -12,7 +12,7 @@ body {
 .slide {
   margin: 0 auto;
   overflow: hidden;
-  width: 47%;
+  width: 900px;
   height: 700px;
   
   /*background-color: #eee;*/

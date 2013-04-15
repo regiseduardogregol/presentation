@@ -293,6 +293,16 @@ section.small li {
   padding-bottom: 0;
 }
 
+section.end {
+  background: url("../img/slidefinal.png");
+  border-radius: 10px; 
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  height: 700px;
+  width: 900px;
+}
+
 section.middle {
   background: url("../img/bgSlide.png");
   border-radius: 10px;

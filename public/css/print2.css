@@ -10,7 +10,7 @@ body {
 }
 .middle hgroup {margin-top: 50%;}
 .middle hgroup h2{padding-bottom: 6%;font-size: 50px !important; text-align: center !important;float: center;}
-.middle hgroup h3{text-align: center;padding-bottom: 2%;font-size: 40px !important;}
+.middle hgroup h3{text-align: center;padding-bottom: 3%;font-size: 40px !important;}
 
 .slide.landing{text-align:center;}
 
@@ -49,6 +49,8 @@ body {
 .slide ul li{list-style: none;}
 
 .slide p,a{color:#000;text-decoration: none;}
+
+.dados{text-align: center !important;float:center !important;}
 
 /*.slide #timeline-slide-7 ul li{font-size: 18px !important;}*/
 

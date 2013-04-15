@@ -8,11 +8,11 @@ body {
   background: #022d40;
   /*-webkit-font-smoothing: antialiased;*/
 }
-#imprime{padding-left: 500px;float: center;}
-
+/*#imprime{padding-left: 15%;float: center;}*/
 .slide {
+  margin: 0 auto;
   overflow: hidden;
-  width: 900px;
+  width: 47%;
   height: 700px;
   
   /*background-color: #eee;*/
@@ -453,12 +453,6 @@ pre input[type="range"] {
   text-align: center;
 }
 */
-
-.hsl-value {
-  display: inline-block;
-  width: 50px;
-}
-
 [data-build] > * {
   -webkit-transition: opacity 0.5s ease-in-out 0.2s; 
   -moz-transition: opacity 0.5s ease-in-out 0.2s; 

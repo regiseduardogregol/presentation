@@ -19,7 +19,7 @@ body {
   height: 700px;
   
   /*background-color: #eee;*/
-  background-color: #d7e6dc;
+  background-color: #E1E7F4;
   border-radius: 10px;
   -moz-border-radius: 10px;
 
@@ -203,7 +203,8 @@ header {
   font-family: Arial;
   font-weight: bold;
   letter-spacing: -.07em;
-  color: #0054AB;
+  color: #fff;
+  background-color: #0054AB;
   font-weight: bold;
   /*text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;*/
   position: absolute;
@@ -211,7 +212,7 @@ header {
   top: 25px;
   margin: 0;
   padding: 0;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 h1 {

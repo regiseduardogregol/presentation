@@ -12,6 +12,7 @@ body {
 .slide {
   margin: 0 auto;
   page-break-after: always;
+  margin-top: -70px;
   padding: 0 auto;
   overflow: hidden;
   width: 900px;

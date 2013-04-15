@@ -205,7 +205,7 @@ header {
   letter-spacing: -.07em;
   color: #0054AB;
   font-weight: bold;
-  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  /*text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;*/
   position: absolute;
   left: 30px;
   top: 25px;
@@ -233,7 +233,7 @@ section, footer {
   font: Arial;
   font-weight: normal;
   color: #3f3f3f;
-  text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;
+  /*text-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.2) 0 2px 5px;*/
   margin: 100px 30px 0;
   display: block;
   overflow: hidden;

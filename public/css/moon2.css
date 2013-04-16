@@ -6,10 +6,12 @@
 body {
   font: 16px "Trebuchet MS", "Lucida Grande", Verdana, sans-serif;
   background: #fff;
-  width: 910px;
-  height: 710px;
+  margin: 0 auto;
+  width: 900px;
+  height: 700px;
   /*-webkit-font-smoothing: antialiased;*/
 }
+#imprime{float: center;width: 900px; height: 700px;}
 /*#imprime{padding-left: 15%;float: center;}*/
 .slide {
   margin: 0 auto;

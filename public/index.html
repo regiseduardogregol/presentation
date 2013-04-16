@@ -35,7 +35,6 @@
     
     <link href="css/moon.css" class="theme" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" media="screen" />
-    <link href="css/print2.css" rel="stylesheet" type="text/css" media="print" />
 
     <script type="text/javascript">
         function zoomMais(){
@@ -296,9 +295,10 @@
               #timeline-slide-7 p {font-size: 16px !important;}
               #timeline-slide-7 li {text-align: justify;font-size: 16px !important; padding: 4px !important;}
               @-moz-document url-prefix(){
-                            #timeline-slide-7 ul li {
-                                  padding: 1px !important;
-                            }
+                #timeline-slide-7 ul li {padding: 1px !important;}
+                #timeline-slide-7 h3 {margin-top: -10px;}
+                #timeline-slide-7 p{font-size: 15.8px !important;}
+                
               }
             </style>
             <h3>Resultados obtidos em 2012:</h3>
@@ -577,6 +577,12 @@
               #timeline-slide-15 header{background-color: #dbad29 !important; letter-spacing: 1px !important; box-shadow: 3px 3px 1px #888888; border-radius: 8px; width: 900px;padding: 5px 0 10px 10px;}
               #timeline-slide-15 p{margin-top: 1px;}
               #timeline-slide-15 li{padding: 3px;}
+              @-moz-document url-prefix(){
+                            #timeline-slide-15 ul li {
+                                  margin-top: -1px !important;
+                                  padding: 2px !important;
+                            }
+              }
             </style>
           <section>
             <p>
@@ -701,7 +707,7 @@
     </div>
   </div>
 
-  <iframe src="imprimir.html" id="layout_impressao"></iframe>
+  <iframe src="relatorio_atividades_itai.pdf" id="layout_impressao"></iframe>
     <!--[if lt IE 9]>
     <script 
       src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">

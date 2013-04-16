@@ -5,7 +5,9 @@
 
 body {
   font: 16px "Trebuchet MS", "Lucida Grande", Verdana, sans-serif;
-  background: #022d40;
+  background: #fff;
+  width: 910px;
+  height: 710px;
   /*-webkit-font-smoothing: antialiased;*/
 }
 /*#imprime{padding-left: 15%;float: center;}*/
@@ -20,8 +22,9 @@ body {
   
   /*background-color: #eee;*/
   background-color: #E1E7F4;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   -moz-border-radius: 10px;
+  border-radius: 10px;
 
   -webkit-transform: scale(0.8) translateZ(0);
   -moz-transform: scale(0.8);
@@ -48,12 +51,12 @@ body {
 }
 
 .slide:nth-child(even) {
-  border-radius: 10px 30px 10px 30px;
+  /*border-radius: 10px 30px 10px 30px;*/
   -moz-border-radius: 10px 20px 10px 20px;
 }
 
 .slide:nth-child(odd) {
-  border-radius: 20px 10px 20px 10px;
+  /*border-radius: 20px 10px 20px 10px;*/
   -moz-border-radius: 20px 10px 20px 10px;
 }
 
